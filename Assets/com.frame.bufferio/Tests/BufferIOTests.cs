@@ -8,39 +8,10 @@ namespace JackFrame.BufferIO.Tests {
 
     public class BufferIOTests {
 
-        class TestClass {
-            // All Base Types && String && Array
-            public bool boolValue;
-            public bool[] boolArray;
-            public byte byteValue;
-            public byte[] byteArray;
-            public char charValue;
-            public double doubleValue;
-            public double[] doubleArray;
-            public float floatValue;
-            public float[] floatArray;
-            public int intValue;
-            public int[] intArray;
-            public long longValue;
-            public long[] longArray;
-            public sbyte sbyteValue;
-            public sbyte[] sbyteArray;
-            public short shortValue;
-            public short[] shortArray;
-            public string stringValue;
-            public string[] stringArray;
-            public uint uintValue;
-            public uint[] uintArray;
-            public ulong ulongValue;
-            public ulong[] ulongArray;
-            public ushort ushortValue;
-            public ushort[] ushortArray;
-        }
-
         [Test]
         public void BufferIOTestsSimplePasses() {
 
-            TestClass obj1 = Gen();
+            TestClass obj1 = TestClass.GenRandom();
             byte[] data = ReflectionSerializeUtil.Serialize(obj1);
             TestClass obj2 = ReflectionSerializeUtil.Deserialize<TestClass>(data);
 
@@ -82,51 +53,47 @@ namespace JackFrame.BufferIO.Tests {
             Assert.That(obj1.ushortValue == obj2.ushortValue);
             Assert.That(obj1.ushortArray.SequenceEqual(obj2.ushortArray));
 
-        }
+            TestStruct vo1 = TestStruct.GenRandom();
+            byte[] data2 = ReflectionSerializeUtil.Serialize(vo1);
+            TestStruct vo2 = ReflectionSerializeUtil.Deserialize<TestStruct>(data2);
 
-        TestClass Gen() {
+            Assert.That(vo1.boolValue == vo2.boolValue);
+            Assert.That(vo1.boolArray.SequenceEqual(vo2.boolArray));
 
-            TestClass obj = new TestClass();
+            Assert.That(vo1.byteValue == vo2.byteValue);
+            Assert.That(vo1.byteArray.SequenceEqual(vo2.byteArray));
 
-            obj.boolValue = UnityEngine.Random.Range(0, 2) == 1;
-            obj.boolArray = Enumerable.Range(0, 10).Select(x => UnityEngine.Random.Range(0, 2) == 1).ToArray();
+            Assert.That(vo1.charValue == vo2.charValue, $"{vo1.charValue} {vo2.charValue}");
+            
+            Assert.That(vo1.doubleValue == vo2.doubleValue);
+            Assert.That(vo1.doubleArray.SequenceEqual(vo2.doubleArray));
 
-            obj.byteValue = (byte)UnityEngine.Random.Range(byte.MinValue, byte.MaxValue);
-            obj.byteArray = Enumerable.Range(0, 10).Select(x => (byte)UnityEngine.Random.Range(byte.MinValue, byte.MaxValue)).ToArray();
+            Assert.That(vo1.floatValue == vo2.floatValue);
+            Assert.That(vo1.floatArray.SequenceEqual(vo2.floatArray));
 
-            obj.charValue = (char)UnityEngine.Random.Range(char.MinValue, char.MaxValue);
+            Assert.That(vo1.intValue == vo2.intValue);
+            Assert.That(vo1.intArray.SequenceEqual(vo2.intArray));
 
-            obj.doubleValue = (double)UnityEngine.Random.Range(float.MinValue, float.MaxValue);
-            obj.doubleArray = Enumerable.Range(0, 10).Select(x => (double)UnityEngine.Random.Range(float.MinValue, float.MaxValue)).ToArray();
+            Assert.That(vo1.longValue == vo2.longValue);
+            Assert.That(vo1.longArray.SequenceEqual(vo2.longArray));
 
-            obj.floatValue = (float)UnityEngine.Random.Range(float.MinValue, float.MaxValue);
-            obj.floatArray = Enumerable.Range(0, 10).Select(x => (float)UnityEngine.Random.Range(float.MinValue, float.MaxValue)).ToArray();
+            Assert.That(vo1.sbyteValue == vo2.sbyteValue);
+            Assert.That(vo1.sbyteArray.SequenceEqual(vo2.sbyteArray));
 
-            obj.intValue = UnityEngine.Random.Range(int.MinValue, int.MaxValue);
-            obj.intArray = Enumerable.Range(0, 10).Select(x => UnityEngine.Random.Range(int.MinValue, int.MaxValue)).ToArray();
+            Assert.That(vo1.shortValue == vo2.shortValue);
+            Assert.That(vo1.shortArray.SequenceEqual(vo2.shortArray));
 
-            obj.longValue = UnityEngine.Random.Range(int.MinValue, int.MaxValue);
-            obj.longArray = Enumerable.Range(0, 10).Select(x => (long)UnityEngine.Random.Range(int.MinValue, int.MaxValue)).ToArray();
+            Assert.That(vo1.stringValue == vo2.stringValue);
+            Assert.That(vo1.stringArray.SequenceEqual(vo2.stringArray));
 
-            obj.sbyteValue = (sbyte)UnityEngine.Random.Range(sbyte.MinValue, sbyte.MaxValue);
-            obj.sbyteArray = Enumerable.Range(0, 10).Select(x => (sbyte)UnityEngine.Random.Range(sbyte.MinValue, sbyte.MaxValue)).ToArray();
+            Assert.That(vo1.uintValue == vo2.uintValue);
+            Assert.That(vo1.uintArray.SequenceEqual(vo2.uintArray));
 
-            obj.shortValue = (short)UnityEngine.Random.Range(short.MinValue, short.MaxValue);
-            obj.shortArray = Enumerable.Range(0, 10).Select(x => (short)UnityEngine.Random.Range(short.MinValue, short.MaxValue)).ToArray();
+            Assert.That(vo1.ulongValue == vo2.ulongValue);
+            Assert.That(vo1.ulongArray.SequenceEqual(vo2.ulongArray));
 
-            obj.stringValue = Guid.NewGuid().ToString();
-            obj.stringArray = Enumerable.Range(0, 10).Select(x => Guid.NewGuid().ToString()).ToArray();
-
-            obj.uintValue = (uint)UnityEngine.Random.Range(uint.MinValue, uint.MaxValue);
-            obj.uintArray = Enumerable.Range(0, 10).Select(x => (uint)UnityEngine.Random.Range(uint.MinValue, uint.MaxValue)).ToArray();
-
-            obj.ulongValue = (ulong)UnityEngine.Random.Range(ulong.MinValue, ulong.MaxValue);
-            obj.ulongArray = Enumerable.Range(0, 10).Select(x => (ulong)UnityEngine.Random.Range(ulong.MinValue, ulong.MaxValue)).ToArray();
-
-            obj.ushortValue = (ushort)UnityEngine.Random.Range(ushort.MinValue, ushort.MaxValue);
-            obj.ushortArray = Enumerable.Range(0, 10).Select(x => (ushort)UnityEngine.Random.Range(ushort.MinValue, ushort.MaxValue)).ToArray();
-
-            return obj;
+            Assert.That(vo1.ushortValue == vo2.ushortValue);
+            Assert.That(vo1.ushortArray.SequenceEqual(vo2.ushortArray));
 
         }
 
