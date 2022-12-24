@@ -1,12 +1,12 @@
 using System.Runtime.InteropServices;
 
-namespace JackFrame {
-    
+namespace GameArki {
+
     [StructLayout(LayoutKind.Explicit)]
-    internal struct DoubleContent {
+    internal struct FloatContent {
         [FieldOffset(0)]
-        public double doubleValue;
+        public float floatValue;
         [FieldOffset(0)]
-        public ulong ulongValue;
+        public uint uintValue;
     }
 }

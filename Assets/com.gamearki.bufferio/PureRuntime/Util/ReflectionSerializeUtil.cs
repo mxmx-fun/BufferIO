@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace JackFrame {
+namespace GameArki {
 
     public static class ReflectionSerializeUtil {
 

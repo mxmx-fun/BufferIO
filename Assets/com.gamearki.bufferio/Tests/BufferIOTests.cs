@@ -4,7 +4,7 @@ using UnityEditor.TestTools;
 using NUnit.Framework;
 using System;
 
-namespace JackFrame.BufferIO.Tests {
+namespace GameArki.BufferIO.Tests {
 
     public class BufferIOTests {
 

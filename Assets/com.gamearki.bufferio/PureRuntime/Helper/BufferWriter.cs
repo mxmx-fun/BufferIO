@@ -4,7 +4,7 @@ using System.Buffers;
 using System.Text;
 using System.Runtime.InteropServices;
 
-namespace JackFrame {
+namespace GameArki {
 
     public static class BufferWriter {
 

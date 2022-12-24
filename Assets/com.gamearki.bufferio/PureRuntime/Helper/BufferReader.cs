@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace JackFrame {
+namespace GameArki {
 
     public static class BufferReader {
 

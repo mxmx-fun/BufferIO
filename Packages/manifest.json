@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.frame.upmaster": "ssh://git@github.com/chenwansal/UPMaster.git?path=/Assets/com.frame.upmaster#main",
     "com.unity.collab-proxy": "1.15.15",
     "com.unity.feature.development": "1.0.1",
     "com.unity.ide.rider": "3.0.13",

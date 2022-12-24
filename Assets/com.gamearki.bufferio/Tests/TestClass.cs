@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace JackFrame.BufferIO.Tests {
+namespace GameArki.BufferIO.Tests {
 
     public class TestClass {
         // All Base Types && String && Array
