@@ -1,0 +1,19 @@
+{
+  "name": "com.gamemodule.bufferio",
+  "version": "0.1.0",
+  "description": "编码解码，用于游戏数据传输存储",
+  "displayName": "GameModule.BufferIO",
+  "unity": "2021.3",
+  "author": {
+    "name": "mxmx"
+  },
+  "changelogUrl": "",
+  "dependencies": {},
+  "documentationUrl": "",
+  "hideInEditor": false,
+  "keywords": [],
+  "license": "",
+  "licensesUrl": "",
+  "samples": [],
+  "unityRelease": "16f1"
+}

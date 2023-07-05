@@ -1,0 +1,19 @@
+int32编码解码 √
+bool编码解码 √
+short编码解码 √
+byte编码解码 √
+float编码解码 √
+long编码解码 √
+double编码解码 √
+char编码解码 √
+string编码解码 √
+
+int32[]编码解 √
+bool[]编码解码 √
+short[]编码解码 √
+byte[]编码解码 √
+float[]编码解码 √
+long[]编码解 √
+double[]编码解码 √
+char[]编码解码 √
+string[]编码解码 √
