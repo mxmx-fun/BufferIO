@@ -1,17 +1,20 @@
 {
   "name": "com.gamemodule.bufferio",
-  "version": "0.1.0",
-  "description": "编码解码，用于游戏数据传输存储",
-  "displayName": "GameModule.BufferIO",
+  "version": "1.0.0",
+  "description": "数据序列化，反序列化",
+  "displayName": "GameArki",
   "unity": "2019.4",
   "author": {
-    "name": "mxmx"
+    "name": "莫夕莫夕",
+    "email": "mxmxfun@sina.com",
+    "url": "https://github.com/mxmx-fun"
   },
   "changelogUrl": "",
   "dependencies": {},
   "documentationUrl": "",
   "hideInEditor": false,
-  "keywords": [],
+  "keywords": [
+  ],
   "license": "",
   "licensesUrl": "",
   "samples": [],
