@@ -19,3 +19,8 @@ long[]编码解 √<br>
 double[]编码解码 √<br>
 char[]编码解码 √<br>
 string[]编码解码 √<br>
+
+## 如何使用：
+1.Unity打开Package Manger窗口  
+2.左上角选择add package from git url  
+3.输入ssh://git@github.com/mxmx-fun/BufferIO.git?path=/Assets/com.gamearki.bufferio#main
